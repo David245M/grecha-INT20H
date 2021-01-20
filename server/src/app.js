@@ -13,7 +13,7 @@ app.use(
   })
 )
 
-app.use('/api', require('./routes/product.route'))
+app.use('/api', require('./routes/product'))
 
 // app.use('/api/', authRoutes)
 
