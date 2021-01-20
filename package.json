@@ -1,0 +1,20 @@
+{
+  "name": "grecha-int20h",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "npm run start --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/David245M/grecha-INT20H.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/David245M/grecha-INT20H/issues"
+  },
+  "homepage": "https://github.com/David245M/grecha-INT20H#readme"
+}
