@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "startDev": "npm i && npm i --prefix client && npm run client",
     "client": "npm run start --prefix client"
   },
   "repository": {
@@ -16,5 +16,16 @@
   "bugs": {
     "url": "https://github.com/David245M/grecha-INT20H/issues"
   },
-  "homepage": "https://github.com/David245M/grecha-INT20H#readme"
+  "homepage": "https://github.com/David245M/grecha-INT20H#readme",
+  "devDependencies": {
+    "prettier": "^2.2.1"
+  },
+  "prettier": {
+    "semi": false,
+    "arrowParens": "avoid",
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "printWidth": 80,
+    "singleQuote": true
+  }
 }
