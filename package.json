@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/David245M/grecha-INT20H/issues"
   },
-  "homepage": "https://github.com/David245M/grecha-INT20H#readme"
+  "homepage": "https://github.com/David245M/grecha-INT20H#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  }
 }
