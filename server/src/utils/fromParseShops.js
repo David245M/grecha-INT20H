@@ -2,8 +2,10 @@ const formParseShop = [
   {
     name: 'Новус',
     url: 'https://novus.zakaz.ua',
+    nameSearch: {
+      "buckwheat": "buckwheat/"
+    },
     prefixUrl: 'ru/categories/',
-    endProductName: '/',
     find: {
       product: 'div.products-box__list-item',
       name: 'span.product-tile__title',
@@ -14,8 +16,10 @@ const formParseShop = [
   {
     name: 'Ашан',
     url: 'https://auchan.zakaz.ua',
+    nameSearch: {
+      "buckwheat": "buckwheat-auchan/"
+    },
     prefixUrl: 'ru/categories/',
-    endProductName: '-auchan/',
     find: {
       product: 'div.products-box__list-item',
       name: 'span.product-tile__title',

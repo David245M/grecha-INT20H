@@ -4,7 +4,7 @@ const getProducts = (shop, productName) => {
   return new Promise((resolve, reject) => {
     let response = []
     const fromUrl =
-      shop.url + '/' + shop.prefixUrl + productName + shop.endProductName
+      shop.url + '/' + shop.prefixUrl + shop.nameSearch[productName]
     osmosis
       .get(fromUrl)
       .find(shop.find.product)
@@ -17,7 +17,6 @@ const getProducts = (shop, productName) => {
       .data(data =>
         response.push({
           ...data,
-          url: shop.url + data.url,
           shopName: shop.name,
         })
       )
