@@ -41,20 +41,6 @@ const formParseShop = [
       weight: 'div.product-reference a',
     },
   },
-  {
-    name: 'FoodLogistic',
-    url: 'https://foodlogistic.com.ua',
-    nameSearch: {
-      buckwheat: '%D0%B3%D1%80%D0%B5%D1%87%D0%B0%D0%BD%D0%B0+%D0%BA%D1%80%D1%83%D0%BF%D0%B0',
-    },
-    prefixUrl: 'katalog/search/?q=',
-    find: {
-      product: 'li.catalog-grid__item',
-      name: 'div.catalogCard-title a',
-      price: 'div.catalogCard-price',
-      weight: 'div.catalogCard-price',
-    },
-  },
 ]
 
 module.exports = formParseShop
