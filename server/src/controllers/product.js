@@ -13,9 +13,13 @@ const product = {
         )
       }
 
-      res.json({ result: responseArray })
+      const result = responseArray.sort(
+        (a, b) => a.productPrice - b.productPrice
+      )
+
+      res.json({ result })
     } catch (e) {
-      res.status(500).json({ message: 'Сталася помилка', error: e.message })
+      res.status(500).json({ message: 'Сталася помилка', error: e })
     }
   },
 }
