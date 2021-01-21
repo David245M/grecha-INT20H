@@ -26,8 +26,7 @@ const getProducts = (shop, productName) => {
     const fromUrl =
       shop.url + '/' + shop.prefixUrl + shop.nameSearch[productName]
 
-    osmosis.config({proxy: 'http://localhost:8090'})
-      .config(console.log)
+    osmosis
       .get(fromUrl)
       .find(shop.find.product)
       .set({

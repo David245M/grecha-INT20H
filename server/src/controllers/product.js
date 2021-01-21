@@ -2,7 +2,7 @@ const product = {
   async get(req, res) {
     try {
       let responseArray = []
-      const { productName } = req.body
+      const productName = req.get('productName')
 
       const fromParseShops = require('../utils/fromParseShops')
       const getProducts = require('../utils/getProducts')
