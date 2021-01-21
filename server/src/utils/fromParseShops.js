@@ -27,6 +27,20 @@ const formParseShop = [
       weight: 'div.product-tile__weight',
     },
   },
+  {
+    name: 'Fozzy',
+    url: 'https://fozzyshop.ua/ru',
+    nameSearch: {
+      buckwheat: '300143-krupa-grechnevaya',
+    },
+    prefixUrl: '',
+    find: {
+      product: 'article.product-miniature-default',
+      name: 'div.product-title a',
+      price: 'span.product-price',
+      weight: 'div.product-reference a',
+    },
+  },
 ]
 
 module.exports = formParseShop
