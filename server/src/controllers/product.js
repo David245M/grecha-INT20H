@@ -3,6 +3,7 @@ const product = {
     try {
       let responseArray = []
       const productName = req.get('productName')
+      console.log(object)
 
       const fromParseShops = require('../utils/fromParseShops')
       const getProducts = require('../utils/getProducts')

@@ -45,11 +45,11 @@ const Table = styled.table`
 
 const App= () => {
   const [tab, setTab] = useState(tabs.buckwheat)
-  // const { get, data, loading, errors } = useLazyRequest('http://localhost:8090/api/product')
+  const { get, data, loading, errors } = useLazyRequest('/api/product')
 
-  // useEffect(() => {
-  //   get({ productName: tab })
-  // }, [tab])
+  useEffect(() => {
+    get({ productName: tab })
+  }, [tab])
 
   return (
     <RootComponent >
