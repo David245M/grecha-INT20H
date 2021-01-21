@@ -9,7 +9,7 @@ app.use(morgan('combined'))
 app.use(bodyParser.json())
 app.use(
   cors({
-    origin: ['http://localhost:8080', 'https://localhost:8080'],
+    origin: ['http://localhost:8080', 'https://localhost:8080', 'https://grecha-int20h.herokuapp.com'],
   })
 )
 
