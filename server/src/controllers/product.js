@@ -19,7 +19,7 @@ const product = {
 
       res.json({ result })
     } catch (e) {
-      res.status(500).json({ message: 'Сталася помилка', error: e.message })
+      res.status(500).json({ message: 'Сталася помилка', error: e })
     }
   },
 }
