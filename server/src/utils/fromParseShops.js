@@ -13,20 +13,20 @@ const formParseShop = [
   //     weight: 'div.product-tile__weight',
   //   },
   // },
-  // {
-  //   name: 'Ашан',
-  //   url: 'https://auchan.zakaz.ua',
-  //   nameSearch: {
-  //     "buckwheat": "buckwheat-auchan/"
-  //   },
-  //   prefixUrl: 'ru/categories/',
-  //   find: {
-  //     product: 'div.products-box__list-item',
-  //     name: 'span.product-tile__title',
-  //     price: 'span.Price__value_caption',
-  //     weight: 'div.product-tile__weight',
-  //   },
-  // },
+  {
+    name: 'Ашан',
+    url: 'https://auchan.zakaz.ua',
+    nameSearch: {
+      "buckwheat": "buckwheat-auchan/"
+    },
+    prefixUrl: 'ru/categories/',
+    find: {
+      product: 'div.products-box__list-item',
+      name: 'span.product-tile__title',
+      price: 'span.Price__value_caption',
+      weight: 'div.product-tile__weight',
+    },
+  },
   {
     name: 'Fozzy',
     url: 'https://fozzyshop.ua/ru',
