@@ -8,8 +8,6 @@ const product = {
       const fromParseShops = require('../utils/fromParseShops')
       const getProducts = require('../utils/getProducts')
 
-
-
       const result = await getHtml('https://fozzyshop.ua/ru/300143-krupa-grechnevaya')
 
       res.json({ result })
@@ -20,8 +18,8 @@ const product = {
 }
 
 async function getHtml(url) {
-  const urls = ['https://fozzyshop.ua/ru/300143-krupa-grechnevaya', 'https://novus.zakaz.ua']
-  const browser = await puppeteer.launch({ headless: false, args: ['--no-sandbox'] })
+  const urls = ['https://fozzyshop.ua/ru/300143-krupa-grechnevaya', 'https://goverla.ua/']
+  const browser = await puppeteer.launch({ headless: false, args: ['--no-sandbox', '--disable-setuid-sandbox'] })
   const pagesContent = {}
 
   const openNewPage = (url) => {
@@ -31,10 +29,9 @@ async function getHtml(url) {
         await page.goto(url, { waitUntil: "networkidle2" })
         pagesContent[url] = await page.content()
         resolve()
-
       } catch (e) {
-        console.log(e)
-        reject()
+        console.log('errrrrrrrrrrslkghlskgh', e)
+        reject(e)
       }
     })
   }
@@ -44,9 +41,14 @@ async function getHtml(url) {
     promises.push(openNewPage(url))
   }
 
-  await Promise.allSettled(promises)
+  try {
+    await Promise.allSettled(promises)
+    await browser.close()
+  } catch (e) {
+    throw e
+  }
 
-  await browser.close()
+
 
   return pagesContent
 }
